@@ -16,6 +16,7 @@ class HomeNode: ASDisplayNode {
     var viewContent     = ASDisplayNode()
     
     var newsFeed : PatientNewsFeedModel?
+    var safeArea : UIEdgeInsets?
     
     override init() {
         super.init()
@@ -35,12 +36,6 @@ class HomeNode: ASDisplayNode {
         
         newsTableNode.delegate = self
         newsTableNode.dataSource = self
-    }
-    
-    override func didLoad() {
-        super.didLoad()
-        
-//        fetchDataNewsFeed()
     }
     
     @objc
@@ -66,7 +61,7 @@ class HomeNode: ASDisplayNode {
         backgroundSpec.style.preferredSize = CGSize(width: constrainedSize.max.width, height: constrainedSize.max.height - 123)
         
         let contentSpec = ASOverlayLayoutSpec(child: backgroundSpec,
-                                              overlay: ASInsetLayoutSpec(insets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0), child: newsTableNode))
+                                              overlay: ASInsetLayoutSpec(insets: UIEdgeInsets(top: 20, left: 0, bottom: safeArea?.bottom ?? 0, right: 0), child: newsTableNode))
         
         return ASStackLayoutSpec(direction: .vertical,
                                  spacing: -20,
@@ -78,7 +73,7 @@ class HomeNode: ASDisplayNode {
 // MARK: ASTableDataSource / ASTableDelegate
 extension HomeNode: ASTableDataSource, ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
@@ -97,6 +92,13 @@ extension HomeNode: ASTableDataSource, ASTableDelegate {
                 return cell
             }
             return nodeBlock
+        case 2:
+            let nodeBlock: ASCellNodeBlock = {
+                let cell = NewsFeedCell()
+                cell.configureViews(doctorList: self.newsFeed?.doctorList)
+                return cell
+            }
+            return nodeBlock
         default:
             let nodeBlock: ASCellNodeBlock = {
                 let cell = ASCellNode()
@@ -107,7 +109,9 @@ extension HomeNode: ASTableDataSource, ASTableDelegate {
     }
     
     func tableNode(_ tableNode: ASTableNode, constrainedSizeForRowAt indexPath: IndexPath) -> ASSizeRange {
-        let size = CGSize(width: self.bounds.width, height: 286)
+        let size = CGSize(width: self.bounds.width, height: (indexPath.item == 2 ?
+                                                                Constants.HomeVC.tableDoctorCellHeight :
+                                                                Constants.HomeVC.tableNewsCellHeight))
         return ASSizeRange(min: size, max: size)
     }
     

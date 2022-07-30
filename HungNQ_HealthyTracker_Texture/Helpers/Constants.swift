@@ -2,7 +2,7 @@
 //  Constants.swift
 //  HealthyTracker
 //
-//  Created by pc_1359 on 17/06/2022.
+//  Created by Nguyen Quang Hung on 17/06/2022.
 //
 
 import Foundation
@@ -43,11 +43,11 @@ struct Constants {
     }
     
     struct HomeVC {
-        static let tableNewsCellHeight: CGFloat = 316
-        static let tableDoctorCellHeight: CGFloat = 255
+        static let tableNewsCellHeight: CGFloat = 286
+        static let tableDoctorCellHeight: CGFloat = 251
         
-        static let cltNewsCellWidth: CGFloat = 274
-        static let cltDoctorCellWidth: CGFloat = 137
+        static let cltDoctorCellSize: CGSize = CGSize(width: 137, height: 213)
+        static let cltNewsCellSize: CGSize = CGSize(width: 274, height: 248)
     }
     
     struct NewsListVC {
@@ -57,5 +57,10 @@ struct Constants {
     
     struct DoctorListVC {
         static let estimateDoctorTableCellHeight: CGFloat = 180
+    }
+    
+    struct Inset {
+        static let insetForCltCell = UIEdgeInsets(top: 0, left: 16, bottom: 28, right: 0)
+        static let insetForHeaderTbvCell = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
 }

@@ -1,6 +1,6 @@
 //
 //  NewsFeedCell.swift
-//  DemoTexture
+//  HungNQ_HealthyTracker_Texture
 //
 //  Created by Nguyen Quang Hung on 26/07/2022.
 //
@@ -11,6 +11,7 @@ import AsyncDisplayKit
 enum NewFeedTableViewCellType {
     case news
     case promotion
+    case doctor
 }
 
 class NewsFeedCell : ASCellNode {
@@ -23,18 +24,20 @@ class NewsFeedCell : ASCellNode {
         return ASCollectionNode(collectionViewLayout: flowLayout)
     }()
     
-    var newsList     : [NewsModel]?
-    var promotionList     : [PromotionModel]?
-    var typeCell : NewFeedTableViewCellType?
+    var newsList            : [NewsModel]?
+    var promotionList       : [PromotionModel]?
+    var doctorList          : [DoctorModel]?
+    var typeCell            : NewFeedTableViewCellType?
     
     required override init() {
         super.init()
         automaticallyManagesSubnodes = true
         
         btnViewAll.setTitle("Xem tất cả", with: UIFont(name: Constants.Font.regular, size: 13), with: Constants.Color.greenBold, for: .normal)
-        btnViewAll.setImage(UIImage(named: "ic_right"), for: .normal)
+        btnViewAll.setImage(UIImage(named: "ic_right2"), for: .normal)
         btnViewAll.semanticContentAttribute = .forceRightToLeft
         
+        register()
         clvNews.showsHorizontalScrollIndicator = false
     }
     
@@ -44,6 +47,7 @@ class NewsFeedCell : ASCellNode {
                                                                           textColor: Constants.Color.fontBlack)
         self.newsList = newsList
         self.promotionList = nil
+        self.doctorList = nil
     }
     
     func configureViews(promotionList: [PromotionModel]?){
@@ -52,11 +56,19 @@ class NewsFeedCell : ASCellNode {
                                                                           textColor: Constants.Color.fontBlack)
         self.newsList = nil
         self.promotionList = promotionList
+        self.doctorList = nil
     }
     
-    override func didLoad() {
-        super.didLoad()
-        
+    func configureViews(doctorList: [DoctorModel]?){
+        self.typeCell = .doctor
+        self.lbTitle.attributedText = NSMutableAttributedString().attrStr(text: "Giới thiệu bác sĩ", font: UIFont(name: Constants.Font.bold, size: 17),
+                                                                          textColor: Constants.Color.fontBlack)
+        self.newsList = nil
+        self.promotionList = nil
+        self.doctorList = doctorList
+    }
+    
+    func register() {
         clvNews.delegate = self
         clvNews.dataSource = self
     }
@@ -75,11 +87,13 @@ class NewsFeedCell : ASCellNode {
                                             children: [titleSpec, btnViewAll])
         
         
-        let headerSpec  = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16), child: headerStack)
+        let headerSpec  = ASInsetLayoutSpec(insets: Constants.Inset.insetForHeaderTbvCell, child: headerStack)
         headerSpec.style.preferredSize = CGSize(width: width, height: 22)
 
         let collectionViewSpec = ASWrapperLayoutSpec(layoutElement: clvNews)
-        collectionViewSpec.style.preferredSize = CGSize(width: width, height: 248)
+        collectionViewSpec.style.preferredSize = CGSize(width: width, height: (self.typeCell == .doctor ?
+                                                                                Constants.HomeVC.cltDoctorCellSize.height :
+                                                                                Constants.HomeVC.cltNewsCellSize.height))
 
         let cellSpec = ASStackLayoutSpec.vertical()
         cellSpec.spacing = 16
@@ -111,6 +125,15 @@ extension NewsFeedCell: ASCollectionDataSource, ASCollectionDelegate {
             }
             return nodeBlock
             
+        case .doctor:
+            let nodeBlock: ASCellNodeBlock = {
+                let cell = DoctorCollectionNodeCell()
+                let doctor = self.doctorList?[indexPath.item]
+                cell.configureViews(doctor: doctor)
+                return cell
+            }
+            return nodeBlock
+            
         default:
             let nodeBlock: ASCellNodeBlock = {
                 let cell = NewsCollectionNodeCell()
@@ -133,13 +156,18 @@ extension NewsFeedCell: ASCollectionDataSource, ASCollectionDelegate {
         case .promotion:
             return promotionList?.count ?? 0
             
+        case .doctor:
+            return doctorList?.count ?? 0
+            
         default:
             return 0
         }
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, constrainedSizeForItemAt indexPath: IndexPath) -> ASSizeRange {
-        let size = CGSize(width: 274, height: 248)
+        let size = (self.typeCell == .doctor ?
+                        Constants.HomeVC.cltDoctorCellSize :
+                        Constants.HomeVC.cltNewsCellSize )
         return ASSizeRange(min: CGSize(width: 0, height: 0), max: size)
     }
 }

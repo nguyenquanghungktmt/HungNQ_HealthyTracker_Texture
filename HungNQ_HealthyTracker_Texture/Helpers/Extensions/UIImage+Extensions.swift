@@ -2,7 +2,7 @@
 //  UIImage+Extensions.swift
 //  HealthyTracker
 //
-//  Created by pc_1359 on 30/06/2022.
+//  Created by Nguyen Quang Hung on 30/06/2022.
 //
 
 import UIKit

@@ -1,6 +1,6 @@
 //
 //  NewsFeedCellNode.swift
-//  DemoTexture
+//  HungNQ_HealthyTracker_Texture
 //
 //  Created by Nguyen Quang Hung on 20/07/2022.
 //
@@ -28,6 +28,8 @@ class NewsCellNode : ASDisplayNode {
         self.addSubnode(point)
         
         self.imgNews.contentMode = .scaleToFill
+        self.imgNews.defaultImage = UIImage.imageWithColor(color: .lightGray)
+        self.title.maximumNumberOfLines = 2
         self.point.backgroundColor = Constants.Color.grayLight
         self.point.cornerRadius = 2
     }

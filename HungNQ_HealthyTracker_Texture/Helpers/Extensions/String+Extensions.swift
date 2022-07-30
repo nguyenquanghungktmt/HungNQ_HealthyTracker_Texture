@@ -2,7 +2,7 @@
 //  String+Extensions.swift
 //  HealthyTracker
 //
-//  Created by pc_1359 on 24/06/2022.
+//  Created by Nguyen Quang Hung on 24/06/2022.
 //
 extension String {
     func components(withMaxLength length: Int) -> [String] {

@@ -2,7 +2,7 @@
 //  UILabel+Extension.swift
 //  HealthyTracker
 //
-//  Created by pc_1359 on 20/06/2022.
+//  Created by Nguyen Quang Hung on 20/06/2022.
 //
 
 import Foundation

@@ -1,6 +1,6 @@
 //
 //  HomeViewController.swift
-//  DemoTexture
+//  HungNQ_HealthyTracker_Texture
 //
 //  Created by Nguyen Quang Hung on 25/07/2022.
 //
@@ -11,14 +11,14 @@ class HomeViewController : ASDKViewController<ASDisplayNode> {
     lazy var loading        = UIActivityIndicatorView()
     lazy var refreshControl = UIRefreshControl()
     
-    var homeNode    = HomeNode()
-//    var newsFeed : PatientNewsFeedModel?
+    var homeNode            = HomeNode()
     
     override init() {
-        super.init(node: BaseNode())
+        super.init(node: ASDisplayNode())
         self.node.backgroundColor = .white
         self.node.addSubnode(homeNode)
         self.homeNode.clipsToBounds = true
+        self.homeNode.safeArea = self.safeAreaInsets
 
         self.node.layoutSpecBlock = { [weak self] parentNode, constrainedSize in
             guard let homeNode = self?.homeNode else { return ASLayoutSpec() }

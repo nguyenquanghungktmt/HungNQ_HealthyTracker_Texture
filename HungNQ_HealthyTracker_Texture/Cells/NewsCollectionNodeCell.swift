@@ -1,6 +1,6 @@
 //
 //  NewsCollectionNodeCell.swift
-//  DemoTexture
+//  HungNQ_HealthyTracker_Texture
 //
 //  Created by Nguyen Quang Hung on 29/07/2022.
 //
@@ -8,25 +8,25 @@
 import AsyncDisplayKit
 
 class NewsCollectionNodeCell: ASCellNode {
-    var newsContent = NewsCellNode()
+    var newsCell = NewsCellNode()
     
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
         
-        newsContent.backgroundColor = .white
-        newsContent.cornerRadius = 8
-        newsContent.clipsToBounds = true
+        newsCell.backgroundColor = .white
+        newsCell.cornerRadius = 8
+        newsCell.clipsToBounds = true
         
         setShadow()
     }
     
     func configureCell(news: NewsModel?) {
-        newsContent.configureView(news: news)
+        newsCell.configureView(news: news)
     }
     
     func configureCell(promotion: PromotionModel?) {
-        newsContent.configureView(promotion: promotion)
+        newsCell.configureView(promotion: promotion)
     }
     
     func setShadow() {
@@ -37,6 +37,6 @@ class NewsCollectionNodeCell: ASCellNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 0, left: 16, bottom: 28, right: 0), child: newsContent)
+        return ASInsetLayoutSpec(insets: Constants.Inset.insetForCltCell, child: newsCell)
     }
 }
