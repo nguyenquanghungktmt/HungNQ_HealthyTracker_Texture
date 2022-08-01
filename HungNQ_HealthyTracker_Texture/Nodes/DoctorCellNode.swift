@@ -17,7 +17,6 @@ class DoctorCellNode: ASDisplayNode {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        self.clipsToBounds = true
         
         self.addSubnode(imgDoctor)
         self.addSubnode(lbName)
@@ -71,8 +70,8 @@ class DoctorCellNode: ASDisplayNode {
                                                                           font: UIFont(name: Constants.Font.regular, size: 12),
                                                                           textColor: Constants.Color.grayLight)
         self.lbRating.attributedText = NSMutableAttributedString()
-            .attrStr(text: "\(doctor?.ratio_star ?? 0) ", font: UIFont(name: Constants.Font.regular, size: 11))
-            .attrStr(text: "(\(doctor?.number_of_reviews ?? 0))", font: UIFont(name: Constants.Font.regular, size: 11), textColor: UIColor.lightGray )
+            .attrStr(text: "\(doctor?.ratio_star ?? 0) ", font: UIFont(name: Constants.Font.regular, size: 11), textColor: Constants.Color.fontBlack)
+            .attrStr(text: "(\(doctor?.number_of_reviews ?? 0))", font: UIFont(name: Constants.Font.regular, size: 11), textColor: Constants.Color.grayLight)
         
     }
 }

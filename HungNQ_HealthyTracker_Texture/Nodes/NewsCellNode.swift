@@ -13,7 +13,6 @@ class NewsCellNode : ASDisplayNode {
     let category = ASTextNode()
     let date = ASTextNode()
     let point = ASDisplayNode()
-    let background = ASDisplayNode()
     
     
     override init() {

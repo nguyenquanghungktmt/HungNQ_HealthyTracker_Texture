@@ -9,7 +9,6 @@ import AsyncDisplayKit
 
 class HomeViewController : ASDKViewController<ASDisplayNode> {
     lazy var loading        = UIActivityIndicatorView()
-    lazy var refreshControl = UIRefreshControl()
     
     var homeNode            = HomeNode()
     
@@ -17,7 +16,6 @@ class HomeViewController : ASDKViewController<ASDisplayNode> {
         super.init(node: ASDisplayNode())
         self.node.backgroundColor = .white
         self.node.addSubnode(homeNode)
-        self.homeNode.clipsToBounds = true
         self.homeNode.safeArea = self.safeAreaInsets
 
         self.node.layoutSpecBlock = { [weak self] parentNode, constrainedSize in

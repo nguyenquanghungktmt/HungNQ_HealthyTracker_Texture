@@ -40,10 +40,8 @@ class UserNode: ASDisplayNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let width = constrainedSize.max.width
-        
         let imgBackgroundSpec = ASWrapperLayoutSpec(layoutElement: imgBackground)
-        imgBackground.style.preferredSize = CGSize(width: width, height: 143)
+        imgBackground.style.preferredSize = CGSize(width: constrainedSize.max.width, height: 143)
         
         let pointSpec = ASWrapperLayoutSpec(layoutElement: point)
         pointSpec.style.preferredSize = CGSize(width: 8, height: 8)
@@ -61,7 +59,7 @@ class UserNode: ASDisplayNode {
         
         let userStack = ASStackLayoutSpec(direction: .horizontal,
                                             spacing: 40,
-                                            justifyContent: .center,
+                                            justifyContent: .start,
                                             alignItems: .center,
                                             children: [infoSpec, imgAvatar])
         

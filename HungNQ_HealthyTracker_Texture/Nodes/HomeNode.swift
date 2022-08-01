@@ -21,7 +21,6 @@ class HomeNode: ASDisplayNode {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        self.clipsToBounds = true
         
         self.addSubnode(userNode)
         self.addSubnode(newsTableNode)

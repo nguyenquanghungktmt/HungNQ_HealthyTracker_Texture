@@ -76,6 +76,7 @@ class NewsFeedCell : ASCellNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let width = constrainedSize.max.width
         
+        // Layout for header
         let titleSpec = ASWrapperLayoutSpec(layoutElement: lbTitle)
         titleSpec.style.flexShrink = 1.0
         titleSpec.style.flexGrow = 1.0
@@ -83,29 +84,28 @@ class NewsFeedCell : ASCellNode {
         let headerStack = ASStackLayoutSpec(direction: .horizontal,
                                             spacing: 40,
                                             justifyContent: .start,
-                                            alignItems: .start,
+                                            alignItems: .center,
                                             children: [titleSpec, btnViewAll])
         
         
         let headerSpec  = ASInsetLayoutSpec(insets: Constants.Inset.insetForHeaderTbvCell, child: headerStack)
         headerSpec.style.preferredSize = CGSize(width: width, height: 22)
 
-        let collectionViewSpec = ASWrapperLayoutSpec(layoutElement: clvNews)
-        collectionViewSpec.style.preferredSize = CGSize(width: width, height: (self.typeCell == .doctor ?
-                                                                                Constants.HomeVC.cltDoctorCellSize.height :
+        // Layout for collection node
+        let collectionSpec = ASWrapperLayoutSpec(layoutElement: clvNews)
+        collectionSpec.style.preferredSize = CGSize(width: width, height: (self.typeCell == .doctor ?
+                                                                        Constants.HomeVC.cltDoctorCellSize.height :
                                                                                 Constants.HomeVC.cltNewsCellSize.height))
 
         let cellSpec = ASStackLayoutSpec.vertical()
         cellSpec.spacing = 16
-        cellSpec.children = [headerSpec, collectionViewSpec]
+        cellSpec.children = [headerSpec, collectionSpec]
         return cellSpec
     }
 }
 
 extension NewsFeedCell: ASCollectionDataSource, ASCollectionDelegate {
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
-
-        
         switch self.typeCell {
         case .news:
             let nodeBlock: ASCellNodeBlock = {
