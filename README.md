@@ -15,13 +15,13 @@ As the framework has grown, many features have been added that can save develope
 
 ### II. App Heathy Tracker
 
-This app Is a demonstation using Texture for create UI. To create this layouts, I will use some Nodes and Specs:
+This app Is a demonstation using Texture for create UI. To create this layouts, I used some Nodes and Specs:
 
 *  `ASDisplayNode`: equivalent to UIKit’s `UIView`
 * `ASCollectionNode` : equivalent to UIKit’s `UICollectionView`
 * `ASTableNode`: equivalent to UIKit’s `UITableView`
 * `ASStackLayoutSpec`: create horizontal or vertical stack view
-* `ASInsetLayoutStack`: create view that include UIEgdeInset
+* `ASInsetLayoutSpec`: create view that include UIEgdeInset
 * `ASOverlayLayoutSpec`
 * `ASWrapperLayoutSpec`
 * ...
