@@ -13,7 +13,6 @@ class NewsCollectionNodeCell: ASCellNode {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        self.addSubnode(newsCell)
         
         newsCell.backgroundColor = .white
         newsCell.cornerRadius = 8

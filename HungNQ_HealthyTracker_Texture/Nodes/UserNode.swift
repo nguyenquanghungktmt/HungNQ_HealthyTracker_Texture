@@ -21,12 +21,6 @@ class UserNode: ASDisplayNode {
         
         self.backgroundColor = .white
         
-        self.addSubnode(lbUsername)
-        self.addSubnode(lbStatus)
-        self.addSubnode(imgAvatar)
-        self.addSubnode(point)
-        self.addSubnode(imgBackground)
-        
         lbUsername.attributedText = NSMutableAttributedString().attrStr(text: "Quỳnh Ken", font: UIFont(name: Constants.Font.bold, size: 17), textColor: .white)
         lbStatus.attributedText = NSMutableAttributedString().attrStr(text: "Đang trực tuyến", font: UIFont(name: Constants.Font.regular, size: 13), textColor: .white)
         

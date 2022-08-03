@@ -18,12 +18,6 @@ class DoctorCellNode: ASDisplayNode {
         super.init()
         automaticallyManagesSubnodes = true
         
-        self.addSubnode(imgDoctor)
-        self.addSubnode(lbName)
-        self.addSubnode(lbMajor)
-        self.addSubnode(lbRating)
-        self.addSubnode(imgStar)
-        
         self.imgDoctor.defaultImage = UIImage(named: "img_doctor_placehold")
         self.imgDoctor.cornerRadius = 6
         self.imgStar.image = UIImage(named: "ic_star")

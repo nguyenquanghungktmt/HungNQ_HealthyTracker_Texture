@@ -21,10 +21,6 @@ class HomeNode: ASDisplayNode {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        
-        self.addSubnode(userNode)
-        self.addSubnode(newsTableNode)
-        self.addSubnode(viewContent)
 
         viewContent.backgroundColor = UIColor.white
         viewContent.cornerRadius = 20

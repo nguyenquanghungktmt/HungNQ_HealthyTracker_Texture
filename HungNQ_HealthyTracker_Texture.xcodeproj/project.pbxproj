@@ -19,15 +19,7 @@
 		736486C328938EC60037943A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486C128938EC60037943A /* HomeViewController.swift */; };
 		736486DF289391020037943A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486D2289391020037943A /* Constants.swift */; };
 		736486E0289391020037943A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486D4289391020037943A /* UIViewController+Extensions.swift */; };
-		736486E1289391020037943A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486D5289391020037943A /* UIView+Extensions.swift */; };
-		736486E2289391020037943A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486D6289391020037943A /* UILabel+Extension.swift */; };
-		736486E3289391020037943A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486D7289391020037943A /* String+Extensions.swift */; };
-		736486E4289391020037943A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486D8289391020037943A /* UIColor+Extensions.swift */; };
-		736486E5289391020037943A /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486D9289391020037943A /* UIImage+Extensions.swift */; };
-		736486E6289391020037943A /* UIButton+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486DA289391020037943A /* UIButton+Extentions.swift */; };
-		736486E8289391020037943A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486DD289391020037943A /* Utilities.swift */; };
 		736486E9289391020037943A /* APIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486DE289391020037943A /* APIUtilities.swift */; };
-		736486EB289391420037943A /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486EA289391420037943A /* NSAttributedString+Extensions.swift */; };
 		736486FA289391FA0037943A /* IntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486EE289391FA0037943A /* IntroModel.swift */; };
 		736486FB289391FA0037943A /* DoctorListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486F0289391FA0037943A /* DoctorListModel.swift */; };
 		736486FC289391FA0037943A /* PatientNewsFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736486F1289391FA0037943A /* PatientNewsFeedModel.swift */; };
@@ -45,6 +37,8 @@
 		7364870E289395C70037943A /* UserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7364870D289395C70037943A /* UserNode.swift */; };
 		736487122893A0610037943A /* NSMutableAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736487112893A0610037943A /* NSMutableAttributedString+Extensions.swift */; };
 		736487142893B2280037943A /* HomeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736487132893B2280037943A /* HomeNode.swift */; };
+		7368E174289A52B8001D1EA2 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368E173289A52B8001D1EA2 /* UIColor+Extensions.swift */; };
+		7368E176289A52C8001D1EA2 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368E175289A52C8001D1EA2 /* UIImage+Extensions.swift */; };
 		81F00AB8F5A42CFAF7595676 /* Pods_HungNQ_HealthyTracker_Texture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B6B6CB7EEEBF8F213BEF31 /* Pods_HungNQ_HealthyTracker_Texture.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,15 +58,7 @@
 		736486C128938EC60037943A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		736486D2289391020037943A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		736486D4289391020037943A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		736486D5289391020037943A /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		736486D6289391020037943A /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
-		736486D7289391020037943A /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		736486D8289391020037943A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		736486D9289391020037943A /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		736486DA289391020037943A /* UIButton+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extentions.swift"; sourceTree = "<group>"; };
-		736486DD289391020037943A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		736486DE289391020037943A /* APIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUtilities.swift; sourceTree = "<group>"; };
-		736486EA289391420037943A /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		736486EE289391FA0037943A /* IntroModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroModel.swift; sourceTree = "<group>"; };
 		736486F0289391FA0037943A /* DoctorListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorListModel.swift; sourceTree = "<group>"; };
 		736486F1289391FA0037943A /* PatientNewsFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientNewsFeedModel.swift; sourceTree = "<group>"; };
@@ -90,6 +76,8 @@
 		7364870D289395C70037943A /* UserNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNode.swift; sourceTree = "<group>"; };
 		736487112893A0610037943A /* NSMutableAttributedString+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		736487132893B2280037943A /* HomeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNode.swift; sourceTree = "<group>"; };
+		7368E173289A52B8001D1EA2 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		7368E175289A52C8001D1EA2 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		A9E911A3548E66E1A49E25CF /* Pods-HungNQ_HealthyTracker_Texture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HungNQ_HealthyTracker_Texture.release.xcconfig"; path = "Target Support Files/Pods-HungNQ_HealthyTracker_Texture/Pods-HungNQ_HealthyTracker_Texture.release.xcconfig"; sourceTree = "<group>"; };
 		FE33D32ECA66DE84F050CB59 /* Pods-HungNQ_HealthyTracker_Texture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HungNQ_HealthyTracker_Texture.debug.xcconfig"; path = "Target Support Files/Pods-HungNQ_HealthyTracker_Texture/Pods-HungNQ_HealthyTracker_Texture.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,13 +196,8 @@
 			children = (
 				736487112893A0610037943A /* NSMutableAttributedString+Extensions.swift */,
 				736486D4289391020037943A /* UIViewController+Extensions.swift */,
-				736486D5289391020037943A /* UIView+Extensions.swift */,
-				736486D6289391020037943A /* UILabel+Extension.swift */,
-				736486D7289391020037943A /* String+Extensions.swift */,
-				736486D8289391020037943A /* UIColor+Extensions.swift */,
-				736486D9289391020037943A /* UIImage+Extensions.swift */,
-				736486DA289391020037943A /* UIButton+Extentions.swift */,
-				736486EA289391420037943A /* NSAttributedString+Extensions.swift */,
+				7368E173289A52B8001D1EA2 /* UIColor+Extensions.swift */,
+				7368E175289A52C8001D1EA2 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,7 +205,6 @@
 		736486DC289391020037943A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				736486DD289391020037943A /* Utilities.swift */,
 				736486DE289391020037943A /* APIUtilities.swift */,
 			);
 			path = Utilities;
@@ -399,10 +381,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				736486EB289391420037943A /* NSAttributedString+Extensions.swift in Sources */,
-				736486E8289391020037943A /* Utilities.swift in Sources */,
 				736486FA289391FA0037943A /* IntroModel.swift in Sources */,
 				73648701289391FA0037943A /* UserModel.swift in Sources */,
+				7368E176289A52C8001D1EA2 /* UIImage+Extensions.swift in Sources */,
 				7358333F2894CFE40089B94E /* DoctorCellNode.swift in Sources */,
 				736487122893A0610037943A /* NSMutableAttributedString+Extensions.swift in Sources */,
 				736486FD289391FA0037943A /* NewsModel.swift in Sources */,
@@ -411,26 +392,21 @@
 				736486BD28938E9A0037943A /* NewsFeedCell.swift in Sources */,
 				736486A328938D080037943A /* AppDelegate.swift in Sources */,
 				73648702289391FA0037943A /* PromotionModel.swift in Sources */,
-				736486E4289391020037943A /* UIColor+Extensions.swift in Sources */,
 				736486DF289391020037943A /* Constants.swift in Sources */,
-				736486E2289391020037943A /* UILabel+Extension.swift in Sources */,
 				736486BC28938E9A0037943A /* NewsCollectionNodeCell.swift in Sources */,
 				73648703289391FA0037943A /* LocationModel.swift in Sources */,
 				736486FE289391FA0037943A /* PromotionListModel.swift in Sources */,
 				736486E0289391020037943A /* UIViewController+Extensions.swift in Sources */,
 				736486FB289391FA0037943A /* DoctorListModel.swift in Sources */,
-				736486E3289391020037943A /* String+Extensions.swift in Sources */,
 				7364870E289395C70037943A /* UserNode.swift in Sources */,
 				736486BE28938E9A0037943A /* NewsCellNode.swift in Sources */,
-				736486E1289391020037943A /* UIView+Extensions.swift in Sources */,
 				73648704289391FA0037943A /* NewsListModel.swift in Sources */,
-				736486E5289391020037943A /* UIImage+Extensions.swift in Sources */,
 				736486C328938EC60037943A /* HomeViewController.swift in Sources */,
-				736486E6289391020037943A /* UIButton+Extentions.swift in Sources */,
 				736486A528938D080037943A /* SceneDelegate.swift in Sources */,
 				736487142893B2280037943A /* HomeNode.swift in Sources */,
 				736486E9289391020037943A /* APIUtilities.swift in Sources */,
 				73648700289391FA0037943A /* ArticleModel.swift in Sources */,
+				7368E174289A52B8001D1EA2 /* UIColor+Extensions.swift in Sources */,
 				736486FF289391FA0037943A /* DoctorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

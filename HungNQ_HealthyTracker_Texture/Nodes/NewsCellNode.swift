@@ -20,12 +20,6 @@ class NewsCellNode : ASDisplayNode {
         automaticallyManagesSubnodes = true
         self.clipsToBounds = true
         
-        self.addSubnode(imgNews)
-        self.addSubnode(title)
-        self.addSubnode(category)
-        self.addSubnode(date)
-        self.addSubnode(point)
-        
         self.imgNews.contentMode = .scaleToFill
         self.imgNews.defaultImage = UIImage.imageWithColor(color: .lightGray)
         self.title.maximumNumberOfLines = 2
